@@ -1,0 +1,881 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="description" content="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/images/favicon.png ' %}" />
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static '/css/plugins.css' %}" />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/responsive.css' %}" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body class="template-collection diva">
+    <!-- Page Loader -->
+    <div id="pre-loader"><img src="{% static '/images/loader.gif' %}" alt="Loading..." /></div>
+    <!-- End Page Loader -->
+
+    <div class="pageWrapper">
+        <!-- Search Form Drawer -->
+        <div class="search">
+            <div class="search__form">
+                <form class="search-bar__form" action="#">
+                    <button class="go-btn search__button" type="submit"><i class="icon an an-search"></i></button>
+                    <input class="search__input" type="search" name="q" value=""
+                        placeholder="Search for products, brands..." aria-label="Search" autocomplete="off" />
+                </form>
+                <button type="button" class="search-trigger close-btn" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Close"><i class="icon an an-times"></i></button>
+            </div>
+        </div>
+        <!-- End Search Form Drawer -->
+
+        <!-- Main Header -->
+        <div class="header-section classicHeader clearfix animated hdr-sticky">
+            <!-- Desktop Header -->
+            <div class="header-1 classic-style">
+                <!-- Header -->
+                <div class="header-wrap d-flex">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-8 d-block d-lg-none">
+                                <button type="button"
+                                    class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu"><i
+                                        class="icon an an-times"></i><i class="icon an an-bars"></i></button>
+                                <!-- Mobile Search -->
+                                <div class="site-header__search d-block d-lg-none mobile-search-icon">
+                                    <button type="button" class="search-trigger" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" title="Search"><i
+                                            class="icon an an-search"></i></button>
+                                </div>
+                                <!-- End Mobile Search -->
+                            </div>
+                            <!-- Desktop Logo -->
+                            <div class="logo col-4 col-sm-4 col-md-4 col-lg-2 align-self-center">
+                                <a href="#"><img src="{%static 'images/logo.png'%}"
+                                        alt="Diva Multipurpose Html Template"
+                                        title="Diva Multipurpose Html Template" /></a>
+                            </div>
+                            <!-- End Desktop Logo -->
+                            <!-- Desktop Navigation -->
+                            <div class="col-2 col-sm-3 col-md-3 col-lg-8 d-none d-lg-block">
+                                <!-- Desktop Menu -->
+                                <nav class="grid__item" id="AccessibleNav">
+                                    <ul id="siteNav" class="d-flex flex-wrap site-nav medium center hidearrow">
+                                        <li class="lvl1 parent dropdown">
+                                            <a href="/">Home <i class="an an-angle-down"></i></a>
+                                        </li>
+                                        <li class="lvl1 parent megamenu">
+                                            <a href="/men_topwear/">MEN <i class="an an-angle-down"></i></a>
+                                            <div class="megamenu style1">
+                                                <div class="row">
+                                                    <div class="lvl-1 col-12 col-md-9 col-lg-9">
+                                                        <ul class="row grid--uniform mmWrapper">
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/men_topwear/" class="site-nav lvl-1">Topwear</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/men_tshirt/"
+                                                                            class="site-nav">T-shirts</a></li>
+                                                                    <li class="lvl-2"><a href="/men_casualshirt/"
+                                                                            class="site-nav">Casual Shirts</a></li>
+                                                                    <li class="lvl-2"><a href="/men_formalshirt/"
+                                                                            class="site-nav">Formal Shirts</a></li>
+                                                                    <li class="lvl-2"><a href="/men_sweatshirt/"
+                                                                            class="site-nav">Sweat Shirts</a></li>
+                                                                    <li class="lvl-2"><a
+                                                                            href="/men_sweater/"
+                                                                            class="site-nav">Sweaters</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/men_jacket/"
+                                                                            class="site-nav">Jackets</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/men_blazer/"
+                                                                            class="site-nav">Blazers & Coats</a></li>
+                                                                    <li class="lvl-2"><a href="/men_suit/"
+                                                                            class="site-nav">Suits</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/men_bottomwear/" class="site-nav lvl-1">Bottomwear</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/men_jeans/"
+                                                                            class="site-nav">Jeans</a></li>
+                                                                    <li class="lvl-2"><a href="/men_casualtrouser/"
+                                                                            class="site-nav">Casual Trousers</a></li>
+                                                                    <li class="lvl-2"><a href="/men_formaltrouser/"
+                                                                            class="site-nav">Formal Trousers</a></li>
+                                                                    <li class="lvl-2"><a href="/men_shorts/"
+                                                                            class="site-nav">Shorts</a></li>
+                                                                    <li class="lvl-2"><a href="/men_trackpant/"
+                                                                            class="site-nav">Track Pants & Joggers</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/men_footwear/" class="site-nav lvl-1 menu-title">Footwear
+                                                                </a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/men_casualshoes/"
+                                                                            class="site-nav">Casual Shoes</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/men_sportshoes/"
+                                                                            class="site-nav">Sports Shoes</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/men_formalshoes/"
+                                                                            class="site-nav">Formal Shoes</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/men_sneakers/"
+                                                                            class="site-nav last">Sneakers</a></li>
+                                                                    <li class="lvl-2"><a href="/men_sandals/"
+                                                                            class="site-nav">Sandals & Floaters</a></li>
+                                                                    <li class="lvl-2"><a href="/men_flipflop/"
+                                                                            class="site-nav">Flip Flops</a></li>
+                                                                    <li class="lvl-2"><a href="/men_socks/"
+                                                                            class="site-nav">Socks</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="lvl-1 col-12 col-md-3 col-lg-3 product-menu">
+                                                        <a href="#" class="site-nav lvl-1 text-center">Best Seller</a>
+                                                        <div class="grid-products text-center">
+                                                            <div class="product-image">
+                                                                <a href="#"
+                                                                    class="grid-view-item__link"><img
+                                                                        src="{%static 'images/men/mens-apparels__main.jpg'%}"
+                                                                        alt="image" title="" /></a>
+                                                            </div>
+                                                            <div class="product-details text-center">
+                                                                <div class="product-name">
+                                                                    <a href="#">J B Crepe multi Color
+                                                                        Top</a>
+                                                                </div>
+                                                                <div class="product-price">
+                                                                    <span class="price">$800.00</span>
+                                                                </div>
+                                                                <div class="product-review mt-1">
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star-half-alt"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 imageCol">
+                                                        <div class="row mm2-banner">
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg2.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg3.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="lvl1 parent megamenu">
+                                            <a href="/fusion_wear/">WOMEN <i class="an an-angle-down"></i></a>
+                                            <div class="megamenu style1">
+                                                <div class="row">
+                                                    <div class="lvl-1 col-12 col-md-9 col-lg-9">
+                                                        <ul class="row grid--uniform mmWrapper">
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/fusion_wear/" class="site-nav lvl-1">Indian & Fusion
+                                                                    Wear</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/women_kurtas/"
+                                                                            class="site-nav">Kurtas</a></li>
+                                                                    <li class="lvl-2"><a href="/women_kurtis/"
+                                                                            class="site-nav">Kurtis & Tops</a></li>
+                                                                    <li class="lvl-2"><a href="/women_sarees/"
+                                                                            class="site-nav">Sarees</a></li>
+                                                                    <li class="lvl-2"><a href="/women_ethnicwear/"
+                                                                            class="site-nav">Ethnic Wear</a></li>
+                                                                    <li class="lvl-2"><a
+                                                                            href="/women_salwar/"
+                                                                            class="site-nav">Salwar</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/women_plazzos/"
+                                                                            class="site-nav">Skirts & Plazzos</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/women_dupatta/"
+                                                                            class="site-nav">Dupatta & Shawl</a></li>
+                                                                    <li class="lvl-2"><a href="/women_jacket/"
+                                                                            class="site-nav">Jackets</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/western_wear/" class="site-nav lvl-1">Western Wear</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/women_dresses/"
+                                                                            class="site-nav">Dresses</a></li>
+                                                                    <li class="lvl-2"><a href="/women_tops/"
+                                                                            class="site-nav">Tops</a></li>
+                                                                    <li class="lvl-2"><a href="/women_tshirt/"
+                                                                            class="site-nav">T-shirts</a></li>
+                                                                    <li class="lvl-2"><a href="/women_jeans/"
+                                                                            class="site-nav">Jeans</a></li>
+                                                                    <li class="lvl-2"><a href="/women_trouser/"
+                                                                            class="site-nav">Trousers & Capris</a></li>
+                                                                    <li class="lvl-2"><a href="/women_skirt/"
+                                                                            class="site-nav">Shorts & Skirts</a></li>
+                                                                    <li class="lvl-2"><a href="/women_coat/"
+                                                                            class="site-nav">Jackets & Coats</a></li>
+                                                                    <li class="lvl-2"><a
+                                                                            href="/women_blazer/"
+                                                                            class="site-nav">Blazers</a></li>
+                                                                    <li class="lvl-2"><a href="/women_sweater/"
+                                                                            class="site-nav">Sweaters</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/women_footwear/" class="site-nav lvl-1 menu-title">Footwear
+                                                                </a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/women_flat/"
+                                                                            class="site-nav">Flats</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/women_casualshoes/"
+                                                                            class="site-nav">Casual Shoes</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/women_heels/"
+                                                                            class="site-nav">Heels</a>
+                                                                    </li>
+                                                                    <li class="lvl-2"><a href="/women_boots/"
+                                                                            class="site-nav last">Boots</a></li>
+                                                                    <li class="lvl-2"><a href="/women_sportshoes/"
+                                                                            class="site-nav">Sports Shoes</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="lvl-1 col-12 col-md-3 col-lg-3 product-menu">
+                                                        <a href="#" class="site-nav lvl-1 text-center">Best Seller</a>
+                                                        <div class="grid-products text-center">
+                                                            <div class="product-image">
+                                                                <a href="#"
+                                                                    class="grid-view-item__link"><img
+                                                                        src="{%static 'images/megamenu/megamenu-product.jpg' %}"
+                                                                        alt="image" title="" /></a>
+                                                            </div>
+                                                            <div class="product-details text-center">
+                                                                <div class="product-name">
+                                                                    <a href="#">J B Crepe multi Color
+                                                                        Top</a>
+                                                                </div>
+                                                                <div class="product-price">
+                                                                    <span class="price">$800.00</span>
+                                                                </div>
+                                                                <div class="product-review mt-1">
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star-half-alt"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 imageCol">
+                                                        <div class="row mm2-banner">
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg2.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg3.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="lvl1 parent megamenu">
+                                            <a href="/boys_clothing/">KIDS <i class="an an-angle-down"></i></a>
+                                            <div class="megamenu style1">
+                                                <div class="row">
+                                                    <div class="lvl-1 col-12 col-md-9 col-lg-9">
+                                                        <ul class="row grid--uniform mmWrapper">
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/boys_clothing/" class="site-nav lvl-1">Boys Clothing</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/boys_kurta/"
+                                                                            class="site-nav">Kurta Pyjamas</a></li>
+                                                                    <li class="lvl-2"><a href="/boys_indowestern/"
+                                                                            class="site-nav">Indo Western</a></li>
+                                                                    <li class="lvl-2"><a href="/boys_sherwani/"
+                                                                            class="site-nav">Sherwani</a></li>
+                                                                    <li class="lvl-2"><a href="/boys_dhotikurta/"
+                                                                            class="site-nav">Dhoti Kurta</a></li>
+                                                                    <li class="lvl-2"><a
+                                                                            href="/boys_jacket/"
+                                                                            class="site-nav">Nehru Jacket</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="lvl-1 col-12 col-md-4 col-lg-4">
+                                                                <a href="/girls_clothing/" class="site-nav lvl-1">Girls Clothing</a>
+                                                                <ul class="subLinks">
+                                                                    <li class="lvl-2"><a href="/girls_lehenga/"
+                                                                            class="site-nav">Lehenga</a></li>
+                                                                    <li class="lvl-2"><a href="/girls_salwar/"
+                                                                            class="site-nav">Salwar Suits</a></li>
+                                                                    <li class="lvl-2"><a href="/girls_gowns/"
+                                                                            class="site-nav">Gowns</a></li>
+                                                                    <li class="lvl-2"><a href="/girls_sarees/"
+                                                                            class="site-nav">Sarees</a></li>
+                                                                    <li class="lvl-2"><a href="/girls_frocks/"
+                                                                            class="site-nav">Frocks</a></li>
+                                                                    <li class="lvl-2"><a href="/girls_dresses/"
+                                                                            class="site-nav">Dresses</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="lvl-1 col-12 col-md-3 col-lg-3 product-menu">
+                                                        <a href="#" class="site-nav lvl-1 text-center">Best Seller</a>
+                                                        <div class="grid-products text-center">
+                                                            <div class="product-image">
+                                                                <a href="#"
+                                                                    class="grid-view-item__link"><img
+                                                                        src="{%static 'images/kids/kids-wear_main.jpg' %}"
+                                                                        alt="image" title="" /></a>
+                                                            </div>
+                                                            <div class="product-details text-center">
+                                                                <div class="product-name">
+                                                                    <a href="#">J B Crepe multi Color
+                                                                        Top</a>
+                                                                </div>
+                                                                <div class="product-price">
+                                                                    <span class="price">$800.00</span>
+                                                                </div>
+                                                                <div class="product-review mt-1">
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star"></i>
+                                                                    <i class="an an-star-half-alt"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 imageCol">
+                                                        <div class="row mm2-banner">
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg2.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-6">
+                                                                <a href="#"><img
+                                                                        src="{%static 'images/megamenu/megamenu-bg3.jpg' %}"
+                                                                        alt="image" /></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- End Desktop Menu -->
+                            </div>
+                            <!-- End Desktop Navigation -->
+                            <!-- Right Side -->
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+                                <div class="right-action d-flex-align-center justify-content-end">
+                                    <!-- Minicart -->
+                                    <div class="item site-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Cart">
+                                        <button type="button" class="nav-link scrollto bg-dark p-1 m-2  text-white" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" >
+                                            <i class="icon an an-shopping-bag"></i>
+                                            <span id="cartcount" class="site-header__cart-count">0</span>
+                                        </button>
+                                    </div>
+                                    <!-- End Minicart -->
+                                    <!-- Search -->
+                                    <div class="item site-header__search d-none d-lg-block">
+                                        <button type="button" class="search-trigger" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Search"><i
+                                                class="icon an an-search"></i></button>
+                                    </div>
+                                    <!-- End Search -->
+                                    <!-- User Links -->
+                                    {% if request.user.is_authenticated %}
+                                    <div class="item user-menu-dropdown d-none d-sm-block d-md-block d-lg-block">
+                                        <span class="user-menu" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Account"><i class="icon an an-user-alt"></i></span>
+                                        <ul class="customer-links list-inline" style="display:none;">
+                                            <li class="item"><a href="/profile/">Account</a></li>
+                                            <li class="item"><a href="/logout/">Logout</a></li>
+                                            <li class="item"><a href="/checkout/">Orders</a></li>
+                                        </ul>
+                                    </div>
+                                    {% else %}
+                                    <div class="item user-menu-dropdown d-none d-sm-block d-md-block d-lg-block">
+                                        <span class="user-menu" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Account"><i class="icon an an-user-alt"></i></span>
+                                        <ul class="customer-links list-inline" style="display:none;">
+                                            <li class="item"><a href="/login/">Login</a></li>
+                                            <li class="item"><a href="/register/">Register</a></li>
+                                            <li class="item"><a href="/checkout/">Orders</a></li>
+                                        </ul>
+                                    </div>
+                                    {% endif %}
+                                    <!-- End User Links -->
+                                    
+                                </div>
+                            </div>
+                            <!-- End Right Side -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Header -->
+            </div>
+            <!-- End Desktop Header -->
+        </div>
+        <!-- End Main Header -->
+
+        <!-- Mobile Menu -->
+        <div class="mobile-nav-wrapper" role="navigation">
+            <div class="closemobileMenu"><i class="icon an an-times-circle closemenu"></i> Close Menu</div>
+            <ul id="MobileNav" class="mobile-nav">
+                <li class="lvl1 parent megamenu">
+                    <a href="/">Home</a>
+                </li>
+                <li class="lvl1 parent megamenu">
+                    <a href="/men_topwear/">Men<i class="an an-plus"></i></a>
+                    <ul>
+                        <li>
+                            <a href="/men_topwear/" class="site-nav">Topwear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/men_tshirt/" class="site-nav">T-shirts</a></li>
+                                <li class="lvl-2"><a href="/men_casualshirt/" class="site-nav">Casual Shirts</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_formalshirt/" class="site-nav">Formal Shirts</a></li>
+                                <li class="lvl-2"><a href="/men_sweetshirt/" class="site-nav">Sweet Shirts</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_sweater/" class="site-nav">Sweaters</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_jacket/" class="site-nav">Jackets</a></li>
+                                <li class="lvl-2"><a href="/men_blazer/" class="site-nav">Blazers & Coats</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_suit/" class="site-nav">Suits</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/men_bottomwear/" class="site-nav">Bottomwear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/men_jeans/" class="site-nav">Jeans</a></li>
+                                <li class="lvl-2"><a href="/men_casualtrouser/" class="site-nav">Casual Trousers</a></li>
+                                <li class="lvl-2"><a href="/men_formaltrouser/" class="site-nav">Formal Trousers</a></li>
+                                <li class="lvl-2"><a href="/men_shorts/" class="site-nav">Shorts</a></li>
+                                <li class="lvl-2"><a href="/men_trackpant/" class="site-nav">Track Pants & Joggers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/men_footwear/" class="site-nav">Footwear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/men_casualshoes/" class="site-nav">Casual Shoes</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_sportshoes/" class="site-nav">Sports Shoes</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_formalshoes/" class="site-nav">Formal Shoes</a>
+                                </li>
+                                <li class="lvl-2"><a href="/men_sneakers/" class="site-nav last">Sneakers</a></li>
+                                <li class="lvl-2"><a href="/men_sandals/" class="site-nav">Sandals & Floaters</a></li>
+                                <li class="lvl-2"><a href="/men_flipflop/" class="site-nav">Flip Flops</a></li>
+                                <li class="lvl-2"><a href="/men_socks/" class="site-nav">Socks</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1 parent megamenu">
+                    <a href="/fusion_wear/">Women<i class="an an-plus"></i></a>
+                    <ul>
+                        <li>
+                            <a href="/fusion_wear/" class="site-nav">Indian & Fusion Wear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/women_suit/" class="site-nav">Kurtas & Suits</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_kurtis/" class="site-nav">Kurtis & Tops</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_sarees/" class="site-nav">Sarees</a></li>
+                                <li class="lvl-2"><a href="/women_ethnicwear/" class="site-nav">Ethnic Wear</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_salwar/" class="site-nav">Salwar</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_plazzos/" class="site-nav">Skirts & Plazzos</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_dupatta/" class="site-nav">Dupatta & Shawl</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_jacket/" class="site-nav">Jackets</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/western_wear/" class="site-nav">Western Wear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/women_dresses/" class="site-nav">Dresses</a></li>
+                                <li class="lvl-2"><a href="/women_tops/" class="site-nav">Tops</a></li>
+                                <li class="lvl-2"><a href="/women_tshirt/" class="site-nav">T-shirts</a></li>
+                                <li class="lvl-2"><a href="/women_jeans/" class="site-nav">Jeans</a></li>
+                                <li class="lvl-2"><a href="/women_trouser/" class="site-nav">Trousers & Capris</a></li>
+                                <li class="lvl-2"><a href="/women_skirt/" class="site-nav">Shorts & Skirts</a></li>
+                                <li class="lvl-2"><a href="/women_coat/" class="site-nav">Jackets & Coats</a></li>
+                                <li class="lvl-2"><a href="/women_blazer/" class="site-nav">Blazers</a></li>
+                                <li class="lvl-2"><a href="/women_sweater/" class="site-nav">Sweaters</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/women_footwear/" class="site-nav">Footwear<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/women_flat/" class="site-nav">Flats</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_casualshoes/" class="site-nav">Casual Shoes</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_heels/" class="site-nav">Heels</a>
+                                </li>
+                                <li class="lvl-2"><a href="/women_boots/" class="site-nav last">Boots</a></li>
+                                <li class="lvl-2"><a href="/women_sportshoes/" class="site-nav">Sports Shoes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1 parent megamenu">
+                    <a href="/boys_clothing/">Kids<i class="an an-plus"></i></a>
+                    <ul>
+                        <li>
+                            <a href="/boys_clothing/" class="site-nav">Boys Clothing<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/boys_kurta/" class="site-nav">Kurta Pyjamas</a>
+                                </li>
+                                <li class="lvl-2"><a href="/boys_indowestern/" class="site-nav">Indo Western</a>
+                                </li>
+                                <li class="lvl-2"><a href="/boys_sherwani/" class="site-nav">Sherwani</a></li>
+                                <li class="lvl-2"><a href="/boys_dhotikurta/" class="site-nav">Dhoti Kurta</a>
+                                </li>
+                                <li class="lvl-2"><a href="/boys_jacket/" class="site-nav">Nehru Jacket</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/girls_clothing/" class="site-nav">Girls Clothing<i class="an an-plus"></i></a>
+                            <ul>
+                                <li class="lvl-2"><a href="/girls_lehenga/" class="site-nav">Lehenga</a></li>
+                                <li class="lvl-2"><a href="/girls_salwar/" class="site-nav">Salwar Suits</a></li>
+                                <li class="lvl-2"><a href="/girls_gowns/" class="site-nav">Gowns</a></li>
+                                <li class="lvl-2"><a href="/girls_sarees/" class="site-nav">Sarees</a></li>
+                                <li class="lvl-2"><a href="/girls_frocks/" class="site-nav">Frocks</a></li>
+                                <li class="lvl-2"><a href="/girls_dresses/" class="site-nav">Dresses</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- End Mobile Menu -->
+
+
+        <!-- Body Content -->
+        <div id="page-content">
+            <!-- Collection Banner -->
+            <div class="collection-header">
+                <div class="collection-hero">
+                    <div class="collection-hero__image blur-up lazyload"
+                        style="background-image: url('{% block banner-url %}  {% endblock %}');">
+                    </div>
+                    <div class="collection-hero__title-wrapper">
+                        <h1 class="collection-hero__title page-width">{% block page-title %} {% endblock %}</h1>
+                    </div>
+                </div>
+                <div class="collection-description container">{% block page-description %}{% endblock %}
+                    <!-- Price Sorting -->
+                    <div class="sidebar_widget filterBox filter-widget" style="min-width: 150px; float: right; margin-left: 10px;">
+                        <select name="sort" id="sort-list" onchange="location = finalurl();" >
+                            <option value="" id="placeholder" disabled selected hidden>Sort</option>
+                            <option id="price" value="price">Price: Low To High</option>
+                            <option id="-price" value="-price">Price: High To Low</option>
+                            <option id="product_name" value="product_name">Product Name</option>
+                            <option id="-pub_date" value="-pub_date">What's New</option>
+                        </select>
+                    </div>
+                    <!-- End Price Sorting -->
+                    <!-- Price Filtering -->
+                    <div class="sidebar_widget filterBox filter-widget" style="min-width: 150px; float: right; margin-right: 10px;">
+                        <select name="price" id="price-list" onchange="location = finalurl2();">
+                            <option value="" id="price-placeholder" disabled selected hidden>Price</option>
+                            <option id="pr500" value="500">less than 500</option>
+                            <option id="pr1000" value="1000">less than 1000</option>
+                            <option id="pr2000" value="2000">less than 2000</option>
+                            <option id="pr10000" value="10000">less than 10000</option>
+                        </select>
+                    </div>
+                    <!-- End Price Filtering -->
+                </div>
+                
+                    
+            </div>
+            <!-- End Collection Banner -->
+
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
+                        <div class="closeFilter d-block d-md-block d-lg-none"><i class="icon an an-times"></i></div>
+                        <div class="sidebar_tags">
+                            <!-- Categories -->
+                            <div class="sidebar_widget filterBox categories filter-widget">
+                                <div class="widget-title">
+                                    <h2>Categories</h2>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="sidebar_categories">
+                                        <li class="level1 sub-level"><a href="#;" class="site-nav">Clothing</a>
+                                            <ul class="sublinks" style="display: none;">
+                                                <li class="level2"><a href="/men_topwear/" class="site-nav">Men</a></li>
+                                                <li class="level2"><a href="/fusion_wear/" class="site-nav">Women</a></li>
+                                                <li class="level2"><a href="/boys_clothing/" class="site-nav">Child</a></li>
+                                                <li class="level2"><a href="/" class="site-nav">View All Clothing</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="lvl-1"><a href="/men_bottomwear/" class="site-nav">Men Bottomwear</a></li>
+                                        <li class="lvl-1"><a href="/women_footwear/" class="site-nav">Women Footwear</a></li>
+                                        <li class="lvl-1"><a href="/western_wear/" class="site-nav">Women Westernwear</a></li>
+                                        <li class="lvl-1"><a href="/boys_sherwani/" class="site-nav">Boys Sherwani</a></li>
+                                        <li class="lvl-1"><a href="/girls_dresses/" class="site-nav">Girls Clothing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Categories -->
+
+                            
+
+                        
+
+                            <!-- Banner -->
+                            <div class="sidebar_widget static-banner">
+                                <a href="/western_wear/"><img class="blur-up lazyload"
+                                        data-src="{% block sidebar-banner %} {% endblock %}"
+                                        src="{% block sidebar-banner_2 %} {% endblock %}" alt="image" /></a>
+                            </div>
+                            <div class="sidebar_widget static-banner">
+                                <a href="/men_topwear/"><img class="blur-up lazyload"
+                                        data-src="{% static '/images/MenWear.jpg ' %}"
+                                        src="{% static '/images/MenWear.jpg ' %}" alt="image" /></a>        
+                            </div>
+                            <div class="sidebar_widget static-banner">
+                                <a href="/boys_clothing/"><img class="blur-up lazyload"
+                                        data-src="{% static '/images/KidsWear.jpg ' %}"
+                                        src="{% static '/images/KidsWear.jpg ' %}" alt="image"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <!-- Main Content -->
+                    {% block main-content %}
+                    {% endblock %}
+                    <!-- End Main Content -->
+                </div>
+            </div>
+        </div>
+        <!-- End Body Content -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="site-footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <!-- Footer Links -->
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
+                                <h4 class="h4">Quick Links</h4>
+                                <ul>
+                                    <li><a href="/fusion_wear/">Women</a></li>
+                                    <li><a href="/men_topwear/">Men</a></li>
+                                    <li><a href="/boys_clothing/">Kids</a></li>
+                                    <li><a href="/">Deals</a></li>
+                                    <li><a href="/">Accessories</a></li>
+                                    <li><a href="/">New In</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
+                                <h4 class="h4">Help</h4>
+                                <ul>
+                                    <li><a href="/faqs/">FAQs</a></li>
+                                    <li><a href="/profile/">My Orders</a></li>
+                                    <li><a href="/privacy_policy/">Privacy &amp; Policy</a></li>
+                                    <li><a href="/">Shipping Policy</a></li>
+                                    <li><a href="/">Returns &amp; Exchange</a></li>
+                                    <li><a href="/">Ordering &amp; Payment</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 contact-box">
+                                <h4 class="h4">Contact Us</h4>
+                                <ul class="addressFooter">
+                                    <li>
+                                        <i class="icon an an-map-marker"></i>
+                                        <p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p>
+                                    </li>
+                                    <li class="phone">
+                                        <i class="icon an an-phone-volume"></i>
+                                        <p><a href="tel:(440)0000000000">(440) 000 000 0000</a></p>
+                                    </li>
+                                    <li class="email">
+                                        <i class="icon an an-envelope"></i>
+                                        <p><a href="mailto:sales@yousite.com">sales@yousite.com</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Footer Links -->
+                </div>
+
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div
+                                class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-Start align-items-center">
+                                <div class="footer-social w-100 text-start d-flex">
+                                    <h3 class="h4">Stay Connected</h3>
+                                    <ul class="list--inline site-footer__social-icons social-icons">
+                                        <li><a class="social-icons__link d-inline-block" href="#" target="_blank"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><i
+                                                    class="icon an an-facebook"></i></a></li>
+                                        <li><a class="social-icons__link d-inline-block" href="#" target="_blank"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><i
+                                                    class="icon an an-twitter"></i> <span
+                                                    class="icon__fallback-text">Twitter</span></a></li>
+                                        <li><a class="social-icons__link d-inline-block" href="#" target="_blank"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest"><i
+                                                    class="icon an an-pinterest-p"></i> <span
+                                                    class="icon__fallback-text">Pinterest</span></a></li>
+                                        <li><a class="social-icons__link d-inline-block" href="#" target="_blank"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><i
+                                                    class="icon an an-instagram"></i> <span
+                                                    class="icon__fallback-text">Instagram</span></a></li>
+                                        <li><a class="social-icons__link d-inline-block" href="#" target="_blank"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="YouTube"><i
+                                                    class="icon an an-youtube"></i> <span
+                                                    class="icon__fallback-text">YouTube</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Footer Payment Icon-->
+                            <div
+                                class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-end align-items-center">
+                                <ul class="payment-icons list--inline w-100 justify-content-end text-end">
+                                    <li><i class="icon an an-cc-visa" aria-hidden="true"></i></li>
+                                    <li><i class="icon an an-cc-mastercard" aria-hidden="true"></i></li>
+                                    <li><i class="icon an an-cc-amex" aria-hidden="true"></i></li>
+                                    <li><i class="icon an an-cc-paypal" aria-hidden="true"></i></li>
+                                    <li><i class="icon an an-cc-discover" aria-hidden="true"></i></li>
+                                </ul>
+                            </div>
+                            <!-- End Footer Payment Icon-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Footer Copyright -->
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 copyright text-center"><span>&copy; 2021
+                                    DIVA.</span> All Rights Reserved.</div>
+                            <!-- End Footer Copyright -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Scoll Top -->
+        <div id="site-scroll"><i class="icon an an-angle-up"></i></div>
+        <!-- End Scoll Top -->
+
+
+        <!-- Including Javascript -->
+        <!-- Plugins JS -->
+        <script src="{% static '/js/plugins.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static '/js/main.js' %}"></script>
+        <!-- Bootsrap & Jquery CDN-->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!-- AddToCart JS -->
+        <script src="{% static '/js/AddToCart.js' %}"></script>
+
+        <script>
+
+            // for getting the sorting status to be displayed in sorting dropdown placeholder
+            function get(name) {
+                if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))  //location.search give query sling part
+                    return decodeURIComponent(name[1]);
+                }
+
+            if(get('ordering'))
+                document.getElementById('placeholder').innerHTML = "Sort: " + document.getElementById(get('ordering')).innerHTML;
+
+            if(get('price'))
+                document.getElementById('price-placeholder').innerHTML = "Price: " + document.getElementById('pr'+get('price')).innerHTML;
+
+
+            // for getting url after applying ordering
+            function finalurl() {
+                var url = new URL(window.location.href);
+                var search_params = url.searchParams;
+                search_params.set('ordering', document.getElementById("sort-list").value);
+                url.search = search_params.toString();
+                var new_url = url.toString();
+                return new_url
+            }
+
+            // for getting url after applying price filtering
+            function finalurl2() {
+                var url = new URL(window.location.href);
+                var search_params = url.searchParams;
+                search_params.set('price', document.getElementById("price-list").value);
+                url.search = search_params.toString();
+                var new_url = url.toString();
+                return new_url
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

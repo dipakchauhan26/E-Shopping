@@ -1,0 +1,162 @@
+{% extends 'clothingsite/basic_2.html' %}
+
+{% load static %}
+
+{% block title %} Girls Lehenga Page {% endblock %}
+
+{% block banner-url %} /static/images/collection/women-collection-bnr.jpg {% endblock %}
+
+{% block page-title %} Girls Lehenga Page Of Our Shop {% endblock %}
+
+{% block page-description %} Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. {% endblock %}
+
+{% block sidebar-banner %} {% static '/images/side-banner-2.jpg' %} {% endblock %}
+
+{% block sidebar-banner_2 %} {% static '/images/side-banner-2.jpg' %} {% endblock %}
+
+{% block main-content %}
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
+    <div class="productList">
+        <!-- Grid Product -->
+        <div class="grid-products grid--view-items product-three-load-more">
+            <div class="row">
+            {% for product in men_formaltrouser_products %}
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                    <!-- Product Image -->
+                    <div class="product-image">
+                        <!-- Product Image -->
+                        <a href="{% url 'productView' myid=product.id %}">
+                            <!-- Image -->
+                            <img data-src="{{product.image.url}}"
+                                src="{{product.image.url}}" alt="image" title="product" />
+                            <!-- End Image -->
+                            <!-- Hover Image 
+                            <img class="hover blur-up lazyload" data-src="{{product.image_2.url}}"
+                                src="{{product.image_2.url}}" alt="image" title="product" />
+                             End Hover Image -->
+                        {% if product.price >= 2200 %}
+                             <!-- Product Label -->
+                            <div class="product-labels rectangular"><span
+                                    class="lbl on-sale">Exclusive</span></div>
+                             <!-- End Product Label -->
+                        {% endif %}
+                        {% if product.price >= 1500 and product.price <= 2199 %}
+                             <!-- Product Label -->
+                             <div class="product-labels rectangular"><span
+                                     class="lbl pr-label2">Hot</span></div>
+                             <!-- End Product Label -->
+                        {% endif %}
+                        {% if product.price >= 1000 and product.price <= 1499 %}
+                             <!-- Product Label -->
+                             <div class="product-labels"><span class="lbl pr-label3">Popular</span></div>
+                             <!-- End Product Label -->
+                        {% endif %}
+                        {% if product.price >= 500 and product.price <= 999 %}
+                             <!-- Product Label -->
+                             <div class="product-labels rectangular"><span
+                                     class="lbl pr-label1">New</span></div>
+                             <!-- End Product Label -->
+                        {% endif %}
+                        </a>
+                        <!-- End Product Image -->
+
+                        <!-- Product Button -->
+                        <span id="divpr{{product.id}}" class="divpr">
+                            <button id="pr{{product.id}}" class="btn btn-danger cart btn-sm mt-0">
+                              AddToCart <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </span>
+                        <!-- End Product Button -->
+                    </div>
+                    <!-- End Product Image -->
+
+                    <!-- Product Details -->
+                    <div class="product-details text-center">
+                        <!-- Product Name -->
+                        <div class="product-name">
+                            <a href="#" id="namepr{{product.id}}">{{product.product_name}}</a>
+                        </div>
+                        <!-- End Product Name -->
+                        <!-- Product Price -->
+                        <div class="product-price">
+                        {% if product.product_name == 'Men Regular Fit Solid Spread Collar Casual Shirt' %}
+                            <span class="old-price">{{product.old_price}}</span>
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% elif product.product_name == 'Men Regular Fit Checkered Spread Collar Casual Shirt' %}
+                            <span class="old-price">{{product.old_price}}</span>
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% elif product.product_name == 'Men Checkered Round Neck Cotton Blend Black T-Shirt' %}
+                            <span class="old-price">{{product.old_price}}</span>
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% elif product.product_name == 'Men Striped Round Neck Yellow Sweater' %}
+                            <span class="old-price">{{product.old_price}}</span>
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% elif product.product_name == 'Men Solid Pure Cotton Straight Kurta  (Black)' %}
+                            <span class="old-price">{{product.old_price}}</span>
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% else %}
+                            <span class="price" id="pricepr{{product.id}}">{{product.price}}</span>
+                        {% endif %}
+                        </div>
+                        <!-- End Product Price -->
+                        <!-- Product Review -->
+                        <div class="product-review">
+                            {% if product.price >= 2300 and product.price <= 2350%} 
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star-half-alt"></i>
+                            {% elif product.price >= 1400 and product.price <= 1500 %} 
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            {% elif product.price >= 2500 and product.price <= 2800 %} 
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            {% elif product.price >= 500 and product.price <= 1200 %} 
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            {% elif product.price >= 99 and product.price <= 499 %}
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            {% else %}
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star-half-alt"></i>
+                            {% endif %}
+                        </div>
+                        <!-- End Product Review -->
+                    </div>
+                    <!-- End Product Details -->
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        <!-- End Grid Product -->
+    </div>
+
+    <!-- Infinit Pagination -->
+    <div class="infinitpaginOuter">
+        <div class="infinitpagin-three">
+            <a href="#" class="btn bg-dark loadMoreThree">Load More</a>
+        </div>
+    </div>
+    <!-- End Infinit Pagination -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,461 @@
+{% extends 'clothingsite/basic.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block body %}
+{% load static %}
+<!-- Body Content -->
+<div id="page-content">
+    
+    <!-- Home Banner slider -->
+    <div class="slideshow slideshow-wrapper pb-section sliderFull">
+        <div class="home-slideshow">
+            <div class="slide slide1 d-block">
+                <div class="slideimg blur-up lazyload bg-size">
+                    <img class="blur-up lazyload bg-img" data-src="{%static 'images/slideshow-banners/diva-banner1.jpg'%}"
+                        src="{%static 'images/slideshow-banners/diva-banner1.jpg'%}" alt="Welcome to Diva New Fashion style"
+                        title="Welcome to Diva New Fashion style" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                        <div class="slideshow__text-content mt-0 text-shadow center">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <p class="mega-small-title">Welcome to</p>
+                                    <h2 class="h1 mega-title slideshow__title">Diva New Fashion style</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">Made with love and
+                                        passion</span>
+                                    <a href="/western_wear/" class="btn btn--large">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2 d-block">
+                <div class="slideimg blur-up lazyload bg-size">
+                    <img class="blur-up lazyload bg-img" data-src="{%static 'images/slideshow-banners/diva-banner2.jpg'%}"
+                        src="{%static 'images/slideshow-banners/diva-banner2.jpg'%}" alt="Happy Customers"
+                        title="Happy Customers" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                        <div class="slideshow__text-content mt-0 center">
+                            <div class="container">
+                                <div class="wrap-caption right">
+                                    <h2 class="h1 mega-title slideshow__title">Happy Customers</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">Save up to 50% off this
+                                        weekend only</span>
+                                    <a href="/boys_clothing/" class="btn btn--large">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide3 d-block">
+                <div class="slideimg blur-up lazyload bg-size">
+                    <img class="blur-up lazyload bg-img" data-src="{%static 'images/slideshow-banners/diva-banner8.jpg'%}"
+                        src="{%static 'images/slideshow-banners/diva-banner8.jpg'%}" alt="Unique Styles"
+                        title="Unique Styles"/>
+                    <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                        <div class="slideshow__text-content mt-0 text-shadow center">
+                            <div class="container">
+                                <div class="wrap-caption right">
+                                    <h2 class="h1 mega-title slideshow__title">Unique Styles</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">Get upto 70% off now</span>
+                                    <a class="btn btn--large" href="/men_topwear/">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Home Banner slider -->
+
+    <!-- Django message of your action -->
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show text-center" role="alert">
+        <strong>{{message}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    <!-- End Django message of your action -->
+
+
+    <!-- Custom Content -->
+    <div class="section custom-content-section">
+        <div class="container">
+            <div class="row custom-content">
+                <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center justify-content-center custom-item">
+                    <div class="custom-item-inner custom-item-inner-image">
+                        <img class="custom-image blur-up ls-is-cached lazyloaded"
+                            data-src="{%static 'images/collection/cool-tshirts.jpg'%}"
+                            src="{%static 'images/collection/cool-tshirts.jpg'%}" alt="Cool T-shirts Closet"
+                            title="Cool T-shirts Closet" />
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center justify-content-center custom-item">
+                    <div class="custom-item-inner custom-item-inner-text text-md-left">
+                        <h2 class="h3">Cool T-shirts Closet</h2>
+                        <p>It’s time for a SS18 wardrobe update! We’ve got the<br> latest arrivals and all the
+                            hottest trends.<br> Shop our newest clothing, footwear &amp; accessories.</p>
+                        <a href="/women_tshirt/" class="btn border-btn-2">Discover More</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center justify-content-center custom-item">
+                    <div class="custom-item-inner custom-item-inner-text text-md-left">
+                        <h2 class="h3">All Fresh Picks</h2>
+                        <p>Discover your new SS18 wardrobe favourites from<br> our latest collection of
+                            clothing, footwear &amp; accessories. <br>Treat yourself to some new staple pieces
+                            to see you through<br> the new season and beyond.</p>
+                        <a href="/women_dresses/" class="btn border-btn-2">Discover More</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center justify-content-center custom-item">
+                    <div class="custom-item-inner custom-item-inner-image">
+                        <img class="custom-image blur-up ls-is-cached lazyloaded"
+                            data-src="{%static 'images/collection/fresh-picks.jpg'%}"
+                            src="{%static 'images/collection/fresh-picks.jpg'%}" alt="All Fresh Picks"
+                            title="All Fresh Picks" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Custom Content -->
+
+    <!-- Collection Box slider -->
+    <div class="collection-box section">
+        <div class="container-fluid">
+            <div class="collection-grid-4item">
+                <div class="collection-grid-item">
+                    <img data-src="{%static 'images/collection/men-suits.jpg'%}" src="{%static 'images/collection/shoes.jpg'%}"
+                        alt="Shoes" class="blur-up lazyload" />
+                    <a href="/men_suit/" class="collection-grid-item__title-wrapper">
+                        <div class="title-wrapper">
+                            <h3 class="collection-grid-item__title">Men Suits</h3>
+                            <span class="btn btn--secondary border-btn-1">Shop Suits</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="collection-grid-item">
+                    <img data-src="{%static 'images/collection/womentop_2.jpg'%}"
+                        src="{%static 'images/collection/womentop_2.jpg'%}" alt="sunglasses" class="blur-up lazyload" />
+                    <a href="/women_tops/" class="collection-grid-item__title-wrapper">
+                        <div class="title-wrapper">
+                            <h3 class="collection-grid-item__title">Women Tops</h3>
+                            <span class="btn btn--secondary border-btn-1">View Collection</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="collection-grid-item">
+                    <img data-src="{%static 'images/collection/heels.jpg'%}"
+                        src="{%static 'images/collection/heels.jpg'%}" alt="Shop Accessories"
+                        class="blur-up lazyload" />
+                    <a href="/women_heels/" class="collection-grid-item__title-wrapper">
+                        <div class="title-wrapper">
+                            <h3 class="collection-grid-item__title">Heels</h3>
+                            <span class="btn btn--secondary border-btn-1">Shop Heels</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="collection-grid-item">
+                    <img data-src="{%static 'images/collection/women-dress.jpg'%}"
+                        src="{%static 'images/collection/women-dress.jpg'%}" alt="Women Dress" class="blur-up lazyload" />
+                    <a href="/women_dresses/" class="collection-grid-item__title-wrapper">
+                        <div class="title-wrapper">
+                            <h3 class="collection-grid-item__title">Women Dress</h3>
+                            <span class="btn btn--secondary border-btn-1">Shop Dresses</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Collection Box slider -->
+
+    <!-- Featured Product -->
+    <div class="product-rows section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="section-header text-center">
+                        <h2 class="h2">Diva's Picks</h2>
+                        <p>Shop Diva's favourite pieces from the Spring Summer '18 collections</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-products grid-products-hover-btn">
+                <div class="productSlider-style1">
+
+                    <!--1-->
+                    <div class="col-12 item">
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <!-- Product Image -->
+                            <a href="/men_jacket/">
+                                <!-- Image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image11.jpg'%}"
+                                    src="{%static 'images/product-images/product-image11.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Image -->
+                                <!-- Hover Image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image11-1.jpg'%}"
+                                    src="{%static 'images/product-images/product-image11-1.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Hover Image -->
+                                <!-- Product Label -->
+                                <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
+                                    <span class="lbl pr-label1">new</span>
+                                </div>
+                                <!-- End Product Label -->
+                            </a>
+                            <!-- End Product Image -->
+                        </div>
+                        <!-- End Product Image -->
+                        <!-- Product Details -->
+                        <div class="product-details text-center">
+                            
+                            <!-- Product Review -->
+                            <div class="product-review">
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star-half-alt"></i>
+                            </div>
+                            <!-- End Product Review --> 
+                        </div>
+                        <!-- End Product Details -->
+                    </div>
+                    
+                    <!--2-->
+                    <div class="col-12 item">
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <!-- Product Image -->
+                            <a href="/women_heels/">
+                                <!-- Image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image17.jpg'%}"
+                                    src="{%static 'images/product-images/product-image17.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Image -->
+                                <!-- Hover Image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image17-1.jpg'%}"
+                                    src="{%static 'images/product-images/product-image17-1.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Hover Image -->
+                                <!-- Product Label -->
+                                <div class="product-labels rectangular"><span class="lbl on-sale">Exclusive</span></div>
+                                <!-- End Product Label -->
+                            </a>
+                            <!-- End Product Image -->
+                        </div>
+                        <!-- End Product Image -->
+                        <!-- Product Details -->
+                        <div class="product-details text-center">
+                            
+                            <!-- Product Review -->
+                            <div class="product-review">
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            </div>
+                            <!-- End Product Review -->
+                        </div>
+                        <!-- End Product Details -->
+                    </div>
+
+                    <!--3-->
+                    <div class="col-12 item">
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <!-- Product Image -->
+                            <a href="/men_bottomwear/">
+                                <!-- Image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image18.jpg'%}"
+                                    src="{%static 'images/product-images/product-image18.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Image -->
+                                <!-- Hover Image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image18-1.jpg'%}"
+                                    src="{%static 'images/product-images/product-image18-1.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Hover Image -->
+                                <!-- Product Label -->
+                                <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span>
+                                </div>
+                                <!-- End Product Label -->
+                            </a>
+                            <!-- End Product Image -->
+                        </div>
+                        <!-- End Product Image -->
+                        <!-- Product Details -->
+                        <div class="product-details text-center">
+                            
+                            <!-- Product Review -->
+                            <div class="product-review">
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star-half-alt"></i>
+                            </div>
+                            <!-- End Product Review -->
+                            <!-- Variant -->
+                            <ul class="swatches">
+                            </ul>
+                            <!-- End Variant -->
+                        </div>
+                        <!-- End Product Details -->
+                    </div>
+
+                    <!--4-->
+                    <div class="col-12 item">
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <!-- Product Image -->
+                            <a href="/men_tshirt/">
+                                <!-- Image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image19.jpg'%}"
+                                    src="{%static 'images/product-images/product-image19.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Image -->
+                                <!-- Hover Image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image19-1.jpg'%}"
+                                    src="{%static 'images/product-images/product-image19-1.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Hover Image -->
+                                <!-- Product Label -->
+                                <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
+                                <!-- End Product Label -->
+                            </a>
+                            <!-- End Product Image -->
+                        </div>
+                        <!-- End Product Image -->
+                        <!-- Product Details -->
+                        <div class="product-details text-center">
+                            
+                            <!-- Product Review -->
+                            <div class="product-review">
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star-half-alt"></i>
+                            </div>
+                            <!-- End Product Review -->
+                            <!-- Variant -->
+                            <ul class="swatches">
+                            </ul>
+                            <!-- End Variant -->
+                        </div>
+                        <!-- End Product Details -->
+                    </div>
+
+                    <!--5-->
+                    <div class="col-12 item">
+                        <!-- Product Image -->
+                        <div class="product-image">
+                            <!-- Product Image -->
+                            <a href="/women_dresses/">
+                                <!-- Image -->
+                                <img class="primary blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image20.jpg'%}"
+                                    src="{%static 'images/product-images/product-image20.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Image -->
+                                <!-- Hover Image -->
+                                <img class="hover blur-up lazyload"
+                                    data-src="{%static 'images/product-images/product-image20-1.jpg'%}"
+                                    src="{%static 'images/product-images/product-image20-1.jpg'%}" alt="image"
+                                    title="product" />
+                                <!-- End Hover Image -->
+                                <!-- Product Label -->
+                                <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
+                                <!-- End Product Label -->
+                            </a>
+                            <!-- End Product Image -->
+                        </div>
+                        <!-- End Product Image -->
+                        <!-- Product Details -->
+                        <div class="product-details text-center">
+                            
+                            <!-- Product Review -->
+                            <div class="product-review">
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                                <i class="an an-star"></i>
+                            </div>
+                            <!-- End Product Review -->
+                            
+                        </div>
+                        <!-- End Product Details -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Featured Product -->
+
+    
+
+    <!-- Store Feature -->
+    <div class="store-feature section no-pb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <ul class="display-table store-info">
+                        <li class="display-table-cell">
+                            <i class="icon an an-truck"></i>
+                            <div class="store-info-text">
+                                <h5>Free Worldwide Shipping</h5>
+                                <span class="sub-text">Free shipping on all US orders</span>
+                            </div>
+                        </li>
+                        <li class="display-table-cell">
+                            <i class="icon an an-money-bill-alt"></i>
+                            <div class="store-info-text">
+                                <h5>Money Guarantee</h5>
+                                <span class="sub-text">30 days money back guarantee</span>
+                            </div>
+                        </li>
+                        <li class="display-table-cell">
+                            <i class="icon an an-question-circle"></i>
+                            <div class="store-info-text">
+                                <h5>Top Notch Support</h5>
+                                <span class="sub-text">We support online 24/7 on day</span>
+                            </div>
+                        </li>
+                        <li class="display-table-cell">
+                            <i class="icon an an-lock"></i>
+                            <div class="store-info-text">
+                                <h5>Secure Payments</h5>
+                                <span class="sub-text">All payment are Secured and trusted.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Store Feature -->
+</div>
+
+
+
+
+
+<!-- End Body Content -->
+{% endblock %}
